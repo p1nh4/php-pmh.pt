@@ -1,0 +1,6 @@
+DAOs -> 
+    https://stackoverflow.com/questions/45490749/service-and-dao-vs-mvc
+
+DBs -> 
+    https://stackoverflow.com/questions/17122656/database-design-for-multiple-product-types-with-variable-attributes
+    https://stackoverflow.com/questions/32801233/how-to-design-a-database-for-medical-products
