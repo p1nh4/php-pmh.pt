@@ -1,0 +1,7 @@
+view
+    nao accede a bd nunca (nao polui o html)
+dao - data access object 
+    classes que conversam com bd, assim na model deixamos as regras de validacao do negocio 
+model 
+    pode acceder aos dados (bd), regras de validacao do bd
+controller
