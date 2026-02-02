@@ -10,21 +10,21 @@ final class Cliente
 
     function save() : Cliente
     {
-        return (new ClienteDAO())->save($this);
+        return new ClienteDAO()->save($this);
     }
 
     function getById(int $id) : ?Cliente
     {
-        return (new ClienteDAO())->selectById($id);
+        return new ClienteDAO()->selectById($id);
     }
 
     function getAllRows() : array
     {
-        return (new ClienteDAO())->select();
+        return new ClienteDAO()->select();
     }
 
-    function delete (int $id) : bool
+    function delete(int $id) : bool
     {
-        return (new ClienteDAO())->delete($id);
+        return new ClienteDAO()->delete($id);
     }
 }

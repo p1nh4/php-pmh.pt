@@ -55,7 +55,7 @@ final class ClienteDAO extends DAO
         $stmt = parent::$conexao->prepare($sql);
         $stmt->bindValue(1, $id);
         $stmt->execute();
-        return $stmt->fetchObejct("App\Model\Cliente");  
+        return $stmt->fetchObject("App\Model\Cliente");  
     }
 
     public function select() : array
@@ -69,7 +69,7 @@ final class ClienteDAO extends DAO
 
     public function delete(int $id) : bool 
     {
-        $sql = "DELETE * FROM cliente WHERE id=?";
+        $sql = "DELETE FROM cliente WHERE id=?";
 
         $stmt = parent::$conexao->prepare($sql);
         $stmt->bindValue(1, $id);
