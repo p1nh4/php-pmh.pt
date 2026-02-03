@@ -2,10 +2,11 @@
 
 namespace App\Controller;
 
-final class InicialController
+final class InicialController extends Controller
 {
-    public static function index() : void
+    public static function index(): void
     {
+        parent::isProtected();
         include VIEWS . '/Inicial/home.php';
     }
 }

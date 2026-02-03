@@ -11,6 +11,7 @@
 <body>
     <div>
         <?php include VIEWS . '/Includes/menu.php'?>
+        <!-- <?php var_dump($_SESSION['usuario_logado'])?> -->
         <h1>Tela Inicial</h1>
     </div>
 

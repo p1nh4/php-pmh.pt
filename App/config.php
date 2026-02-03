@@ -12,5 +12,8 @@ $_ENV['db']['user'] = "root";
 $_ENV['db']['pass'] = "Dev@2026";
 $_ENV['db']['database'] = "db_pmh";
 
-
+// $_ENV['db']['host'] = "sql200.infinityfree.com:3306";
+// $_ENV['db']['user'] = "if0_41066664";
+// $_ENV['db']['pass'] = "g8qouJHH8N";
+// $_ENV['db']['database'] = "if0_41066664_db_pmh";
 
