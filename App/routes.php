@@ -24,7 +24,7 @@ switch ($url) {
         break;
 
     case '/cliente':
-        ClienteController::listar();
+        ClienteController::index();
         break;
 
     case '/cliente/cadastro':

@@ -12,9 +12,9 @@
     <div>
         <?php include VIEWS . '/Includes/menu.php' ?>
         <h1>Cadastro cliente</h1>
-
+        <?= $model->getErrors() ?>
         <form method="post" action="/cliente/cadastro" class="p-5">
-            <input name="id" type="hidden" value="<?= $model->id ?>"/>
+            <input name="id" type="hidden" value="<?= $model->id ?>" />
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome:</label>
                 <input type="text" value="<?= $model->nome ?>" class="form-control" id="nome" name="nome">

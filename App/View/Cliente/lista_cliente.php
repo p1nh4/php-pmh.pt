@@ -15,6 +15,7 @@
 
         <a href="/cliente/cadastro">Novo cliente</a>
 
+        <?= $model->getErrors() ?>
         <table class="table">
             <thead>
                 <tr>
@@ -24,7 +25,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php foreach ($lista as $cliente): ?>
+                <?php foreach ($model->rows as $cliente): ?>
                     <tr>
                         <td> <?= $cliente->id ?> </td>
                         <td> <a href="/cliente/cadastro?id=<?= $cliente->id ?>"><?= $cliente->nome ?> </a></td>

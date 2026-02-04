@@ -3,27 +3,70 @@
 namespace App\Model;
 
 use App\DAO\ClienteDAO;
+use Exception;
 
-final class Cliente
+final class Cliente extends Model
 {
-    public $id, $nome, $endereco, $telefone, $email, $senha;
+    public ?int $id = null;
+    public ?string $nome
+    {
+        set 
+        {
+            if (strlen($value) < 3)
+                throw new Exception("Nome tem que ter min. 3 caracteres");
 
-    function save() : Cliente
+                $this->nome = $value;
+
+        }
+
+        get => $this->nome ?? null;
+    }
+
+    public ?string $endereco
+    {
+        set 
+        {
+            if (strlen($value) < 3)
+                throw new Exception("Endereço tem que ter min. 3 caracteres");
+
+                $this->endereco = $value;
+        }
+
+        get => $this->endereco ?? null;
+    }
+
+    public ?string $telefone
+    {
+        set 
+        {
+            if (empty($value))
+                throw new Exception("Telefone tem de ser preenchido");
+
+                $this->telefone = $value;
+        }
+
+        get => $this->telefone ?? null;
+    }
+    public ?string  $email = null;
+    public ?string  $senha = null;
+
+    function save(): Cliente
     {
         return new ClienteDAO()->save($this);
     }
 
-    function getById(int $id) : ?Cliente
+    function getById(int $id): ?Cliente
     {
         return new ClienteDAO()->selectById($id);
     }
 
-    function getAllRows() : array
+    function getAllRows(): array
     {
-        return new ClienteDAO()->select();
+        $this->rows = new ClienteDAO()->select();
+        return $this->rows;
     }
 
-    function delete(int $id) : bool
+    function delete(int $id): bool
     {
         return new ClienteDAO()->delete($id);
     }
