@@ -29,3 +29,14 @@ Controller --- logica de negocio
     remove registo
 
 View --- interface com Bootstrap
+
+---------------------------------------------------------------------------------------------------------------------
+ngrok  
+    transforma o localhost:8000 numa URL pública temporária.
+    servidor built-in PHP
+        dentro da pasta \App\
+            php -S localhost:8000
+
+    executar ngrok (cmd)
+        ngrok http 8000
+        clicar no link 
