@@ -29,7 +29,7 @@ final class LoginController
             } else
                 $erro = "Email ou senha incorretos";
         }
-        if (isset($_COOKIE['sistema_pmh']))
+        if (isset($_COOKIE['sistema_pmh']) && $model != null)
             $model->email = $_COOKIE['sistema_pmh'];
         include VIEWS . '/Login/form_login.php';
     }
